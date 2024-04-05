@@ -10,7 +10,7 @@ from sklearn.model_selection import cross_val_score
 from sklearn.tree import DecisionTreeClassifier
 
 scores = cross_val_score(DecisionTreeClassifier(), X, y, cv=5)
-print(scores.mean())    #in ra tỉ lệ độ chính xác của 1 model riêng lẻ
+    print(scores.mean())    #in ra tỉ lệ độ chính xác của 1 model riêng lẻ
 
 from sklearn.ensemble import BaggingClassifier
 from sklearn import svm
@@ -25,6 +25,6 @@ bag_model = BaggingClassifier(
     random_state=0
 )
 scores = cross_val_score(bag_model, X, y, cv=5)
-print(scores.mean())
+print(scores.mean())    #in ra tỉ lệ độ chính xác của 1 ensemble model
 
 
